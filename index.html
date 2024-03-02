@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/c51138f570.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<body>
+  <div class="row bg-light p-2">
+    <div class="col-9" style="font-size: 25px;">
+      <i class="fa-brands fa-instagram"></i>
+      Instagram
+    </div>
+    <div class="col-3 d-flex justify-content-end">
+      <button type="button" class="btn btn-success mr-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create a new post
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create a new Post</h5>
+              <button type="button" class="btn-close btnModal" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Caption:
+              <div class="input-group mb-1">
+                <textarea class="form-control" aria-label="With textarea"
+                  placeholder="Add the caption of your post here"></textarea>
+              </div>
+              <button type="button" class="btn btn-outline-dark">
+                <i class="fa-sharp fa-solid fa-camera"></i>
+              </button>
+              <button type="button" class="btn btn-outline-dark">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div> <!--DROPDOWN END-->
+    </div><!--HEADER BUTTONS END-->
+  </div><!--HEADER END-->
+  <div class="container">
+    <!--------------------  NAV PANEL  ------------------>
+    <ul class="nav nav-pills mb-3 mt-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-light active" style="background-color: #ffffff;" id="pills-cuadricula-tab"
+          data-bs-toggle="pill" data-bs-target="#pills-cuadricula" type="button" role="tab"
+          aria-controls="pills-cuadricula" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-light" style="background-color: #ffffff;" id="pills-columna-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-columna" type="button" role="tab" aria-controls="pills-columna" aria-selected="false">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </li>
+    </ul>
+    <!-------------------- END NAV PANEL  ------------------>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active justify-content-center" id="pills-cuadricula" role="tabpanel"
+        aria-labelledby="pills-cuadricula-tab" tabindex="0">
+        <div class="row">
+          <! --- VISTA DE IMAGENES EN UNA SOLA CUADRICULA ---->
+            <div class="card-group">
+              <div class="card">
+                <img src="https://www.triptomax.com/wp-content/uploads/2018/05/shutterstock_193994486.jpg"
+                  class="card-img-top object-fit-cover" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2022/03/26/623eb8c1bc934.jpeg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://media.tycsports.com/files/2023/09/20/620338/real-madrid-equipo_1440x810_wmk.webp?v=1"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+            </div>
+            <div class="card-group">
+              <div class="card">
+                <img
+                  src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2023/07/hamburguesa-3096800.jpg?tf=3840x"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://i.pinimg.com/222x/f2/25/2f/f2252f2900483c28612f7161f1df7aa8.jpg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://www.shutterstock.com/image-photo/funny-cat-flying-photo-playful-260nw-2315020963.jpg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+            </div>
+            <div class="card-group">
+              <div class="card">
+                <img src="https://i.pinimg.com/originals/34/c4/f0/34c4f083ad420ac446f4f90448d8856c.jpg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://m.media-amazon.com/images/I/81NDDPNpt4L._AC_UF894,1000_QL80_.jpg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+              <div class="card">
+                <img src="https://img.freepik.com/foto-gratis/paisaje-forestal_71767-127.jpg"
+                  class="card-img-top object-fit-cover img-fluid h-100" alt="...">
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-columna" role="tabpanel" aria-labelledby="pills-columna-tab" tabindex="0">
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Una bonita familia
+              </div>
+              <div class="col-6 text-end">
+                12/21
+              </div>
+            </div>
+            <img src="https://www.triptomax.com/wp-content/uploads/2018/05/shutterstock_193994486.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>550 likes</strong></div>
+              <p class="card-text">Una bonita familia que se quiere de verdad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Un perro precioso
+              </div>
+              <div class="col-6 text-end">
+                13/21
+              </div>
+            </div>
+            <img src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2022/03/26/623eb8c1bc934.jpeg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>520 likes</strong></div>
+              <p class="card-text">El perro mas bonito del mundo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Real madrid
+              </div>
+              <div class="col-6 text-end">
+                15/21
+              </div>
+            </div>
+            <img src="https://media.tycsports.com/files/2023/09/20/620338/real-madrid-equipo_1440x810_wmk.webp?v=1"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>1580 likes</strong></div>
+              <p class="card-text">El mejor equipo del mundo de futbol</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Una hamburguesa riquisima
+              </div>
+              <div class="col-6 text-end">
+                23/21
+              </div>
+            </div>
+            <img
+              src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2023/07/hamburguesa-3096800.jpg?tf=3840x"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>358 likes</strong></div>
+              <p class="card-text"> Tiene buena pinta no? </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Un bebe precioso
+              </div>
+              <div class="col-6 text-end">
+                25/21
+              </div>
+            </div>
+            <img
+              src="https://i.pinimg.com/222x/f2/25/2f/f2252f2900483c28612f7161f1df7aa8.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>590 likes</strong></div>
+              <p class="card-text"> Que cosa mas preciosa </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Un gato travieso
+              </div>
+              <div class="col-6 text-end">
+                28/21
+              </div>
+            </div>
+            <img
+              src="https://www.shutterstock.com/image-photo/funny-cat-flying-photo-playful-260nw-2315020963.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>680 likes</strong></div>
+              <p class="card-text"> Que gato mas travieso</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+                Un dia de trabajo
+              </div>
+              <div class="col-6 text-end">
+                05/22
+              </div>
+            </div>
+            <img
+              src="https://i.pinimg.com/originals/34/c4/f0/34c4f083ad420ac446f4f90448d8856c.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>540 likes</strong></div>
+              <p class="card-text"> Vamos con todo en el trabajo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+               El iphone 15
+              </div>
+              <div class="col-6 text-end">
+                06/22
+              </div>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/81NDDPNpt4L._AC_UF894,1000_QL80_.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong>580 likes</strong></div>
+              <p class="card-text"> Me parece el mejor telefono del mundo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mx-auto mb-2">
+          <div class="card" style="width: 100%;">
+            <div class=" row encabezadocarta p-2">
+              <div class="col-6">
+               Un bonito paisaje
+              </div>
+              <div class="col-6 text-end">
+                08/22
+              </div>
+            </div>
+            <img src="https://img.freepik.com/foto-gratis/paisaje-forestal_71767-127.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <div> <strong> 1050 likes</strong></div>
+              <p class="card-text"> Es muy bonito el paisaje </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
